@@ -56,6 +56,8 @@ function NinePatch(div) {
 
 	// Load 9patch from background-image
 	this.bgImage = new Image();
+	this.bgImage.crossOrigin = "Anonymous"
+	this.bgImage.setAttribute('crossOrigin', '')
 	this.bgImage.src = NinePatchGetStyle(this.div, 'background-image').replace(/"/g,"").replace(/url\(|\)$/ig, "");
 	this.originalBgColor = NinePatchGetStyle(this.div, 'background-color');
 
